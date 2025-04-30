@@ -39,5 +39,4 @@ The step-by-step installation instructions are available in [`setup-guide.md`](s
 
 # Documentation
 - [Setup Guide](setup-guide.md)
-- [Troubleshooting Common Issues](docs/troubleshooting.md)
 
