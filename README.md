@@ -22,8 +22,6 @@ Successfully initiated an EC2 Instance on AWS
 
 ### Network Configuration
 Configure your security groups and firewall rules to allow access to the EC2 instance. At minimum:  
-- SSH (Port 22) for remote connection  
-- HTTP/HTTPS (Ports 80/443) for the Wazuh web interface  
 ![EC2 Network Configuration](screenshots/ec2-network-configuration.jpg)
 
 ---
