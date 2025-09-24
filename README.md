@@ -1,42 +1,73 @@
-# Wazuh SIEM on AWS EC2
-Setup and configuration of a Wazuh SIEM system on AWS EC2
+# 🛡️ Wazuh SIEM on AWS EC2
+![Wazuh Logo](screenshots/wazuh_logo.png)
 
-This project documents the installation and configuration of the Wazuh SIEM platform on an AWS EC2 instance. 
-It focuses on building a foundational monitoring and log analysis environment using open-source tools in the cloud.
+### Introduction
+This project documents the installation of Wazuh Security Information and Event Management (SIEM) on AWS EC2 instance. It provides a hands-on approach to building a cloud-based SIEM environment, enabling real-time log monitoring, intrusion detection, and threat visualization.
+
+---
 
 ## Project Goals
-- Deploy and configure Wazuh SIEM on AWS EC2
-- Enable host-based intrusion detection and real-time log monitoring
-- Learn basic cloud setup and security group configurations
-- Practice managing a SIEM environment in a virtualized lab setting
+- Deploy and configure Wazuh SIEM on AWS EC2  
+- Enable host-based intrusion detection and real-time log monitoring  
+- Learn basic cloud setup and security group configurations  
+- Gain hands-on experience managing a SIEM environment
 
-## Tools & Technologies
-- AWS EC2 (Ubuntu or Debian)
-- Wazuh (Manager, API, and Web Interface)
-- OpenSSH
-- ufw (firewall)
-- systemctl / journald
+---
 
-## Screenshots
-See the `screenshots/` folder for images of the deployment process and working Wazuh interface.
+### AWS EC2 Instance Setup
+Successfully initiated an EC2 Instance on AWS
+![AWS Instance Dashboard](screenshots/aws-instance-dashboard.jpg)
 
-## Setup Guide
-The step-by-step installation instructions are available in [`setup-guide.md`](setup-guide.md). It includes:
-- EC2 instance provisioning
-- Wazuh installation (via script or manual steps)
-- Opening required ports and configuring security groups
-- Accessing the Wazuh dashboard
+---
+
+### Network Configuration
+Configure your security groups and firewall rules to allow access to the EC2 instance. At minimum:  
+- SSH (Port 22) for remote connection  
+- HTTP/HTTPS (Ports 80/443) for the Wazuh web interface  
+![EC2 Network Configuration](screenshots/ec2-network-configuration.jpg)
+
+---
+
+### Connecting to EC2 via Kali Linux
+Use your local system (Kali Linux in this example) to establish an SSH connection to the EC2 instance.
+![Connecting to EC2 via Kali Linux](screenshots/connecting-to-ec2-via-kali-linux.png)
+
+---
+
+### Remoting into EC2
+Once connected, you can perform administrative tasks and prepare the system for Wazuh installation.
+![Remoting into EC2](screenshots/remoting-into-ec2.png)
+
+---
+
+### Installing Wazuh SIEM in EC2 Instance
+Install Wazuh using either the official installation script or manual setup for the Manager, API, and Web Interface
+![Installing Wazuh SIEM](screenshots/installing-wazuh-on-ec2.png)
+
+---
+
+### Verifying Wazuh Status
+Ensure Wazuh services are running correctly.
+![Verify Wazuh is Running](screenshots/wazuh-status-active.png)
+
+---
 
 ## Outcomes
-- Successfully deployed a functioning SIEM system
-- Monitored and collected logs from the host system
-- Learned how to manage a basic cloud-based detection environment
+- Successfully deployed a fully functional Wazuh SIEM system on AWS EC2
+- Gained hands-on experience with cloud-based SIEM management
+- Practiced managing SSH access and security groups
+
+---
 
 ## Lessons Learned
-- Importance of properly configuring firewall rules (ufw, EC2 security groups)
-- How Wazuh manages agents, logs, and alerts
-- Gained hands-on experience with Linux server administration and cloud services
+- Properly configuring AWS security groups is critical to both security and accessibility
+- Successful installation of the Wazuh agent
+- Cloud-based SIEM labs provide realistic intrusion detection experience
+- Documenting processes helps with repeatable deployments
 
-## Documentation
-- [Setup Guide](setup-guide.md)
+---
 
+## References
+- [Wazuh Documentation](https://documentation.wazuh.com/)
+- [AWS EC2 Guide](https://aws.amazon.com/ec2/)
+- [OpenSSH Documentation](https://www.openssh.com/manual.html)
